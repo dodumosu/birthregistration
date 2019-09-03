@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms"
+        xmlns:h="http://www.w3.org/1999/xhtml"
+        xmlns:jr="http://openrosa.org/javarosa"
+        xmlns:orx="http://openrosa.org/xforms"
+        xmlns:odk="http://www.opendatakit.org/xforms"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <h:head>
+        <h:title>Birth Registration Report</h:title>
+        <model>
+            <instance>
+                <data id="report" orx:version="1">
+                    <girls_below_1></girls_below_1>
+                    <girls_1_to_4></girls_1_to_4>
+                    <girls_5_to_9></girls_5_to_9>
+                    <girls_10_to_17></girls_10_to_17>
+                    <boys_below_1></boys_below_1>
+                    <boys_1_to_4></boys_1_to_4>
+                    <boys_5_to_9></boys_5_to_9>
+                    <boys_10_to_17></boys_10_to_17>
+                    <report_date></report_date>
+                </data>
+            </instance>
+            <bind nodeset="/data/girls_below_1" type="xsd:int"/>
+            <bind nodeset="/data/girls_1_to_4" type="xsd:int"/>
+            <bind nodeset="/data/girls_5_to_9" type="xsd:int"/>
+            <bind nodeset="/data/girls_10_to_17" type="xsd:int"/>
+            <bind nodeset="/data/boys_below_1" type="xsd:int"/>
+            <bind nodeset="/data/boys_1_to_4" type="xsd:int"/>
+            <bind nodeset="/data/boys_5_to_9" type="xsd:int"/>
+            <bind nodeset="/data/boys_10_to_17" type="xsd:int"/>
+            <bind nodeset="/data/report_date" type="xsd:date"/>
+        </model>
+    </h:head>
+    <h:body>
+        <input ref="/data/girls_below_1"><label>Girls under 1</label></input>
+        <input ref="/data/girls_1_to_4"><label>Girls 1 to 4</label></input>
+        <input ref="/data/girls_5_to_9"><label>Girls 5 to 9</label></input>
+        <input ref="/data/girls_10_to_17"><label>Girls 10 and older</label></input>
+        <input ref="/data/boys_below_1"><label>Boys under 1</label></input>
+        <input ref="/data/boys_1_to_4"><label>Boys 1 to 4</label></input>
+        <input ref="/data/boys_5_to_9"><label>Boys 5 to 9</label></input>
+        <input ref="/data/boys_10_to_17"><label>Boys 10 and older</label></input>
+        <input ref="/data/report_date"><label>Date</label></input>
+    </h:body>
+</h:html>
