@@ -212,6 +212,7 @@ INSTALLED_APPS = (
     "profiles",
     "campaigns",
     "ipd",
+    "messagebox",
     "rest_framework",
     "pipeline",
     "bootstrap_pagination",
